@@ -45,6 +45,16 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
+        detail.amount = Double(amountField.text!) as! Double
+        detail.date = dateField.text!
+        detail.detail = detailField.text!
+        detail.saveData { success in
+            if success {
+                self.leaveViewController()
+            } else {
+                print("*** ERROR: Couldn't leave this view controller because data wasn't saved.")
+            }
+        }
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
