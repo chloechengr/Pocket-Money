@@ -14,6 +14,8 @@ import GoogleSignIn
 class ViewController: UIViewController {
 
     @IBOutlet weak var TableView: UITableView!
+    @IBOutlet weak var incomeLabel: UILabel!
+    @IBOutlet weak var spendingLabel: UILabel!
     
     var details: Details!
     var authUI: FUIAuth!
@@ -49,6 +51,22 @@ class ViewController: UIViewController {
         navigationController?.setToolbarHidden(false, animated: false)
         details.loadData {
             self.TableView.reloadData()
+            if self.details.detailArray.count > 0 {
+                var totalIncome = 0.0
+                var totalSpending = 0.0
+                for number in 0..<self.details.detailArray.count {
+                    if self.details.detailArray[number].type == "Income" {
+                        totalIncome = totalIncome + self.details.detailArray[number].amount
+                    } else {
+                        totalSpending = totalSpending + self.details.detailArray[number].amount
+                    }
+                }
+                self.incomeLabel.text = String(totalIncome)
+                self.spendingLabel.text = String(totalSpending)
+            } else {
+                self.incomeLabel.text = "0.0"
+                self.spendingLabel.text = "0.0"
+            }
         }
     }
     
@@ -90,6 +108,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DetailTableViewCell
+        cell.typeLabel.text = details.detailArray[indexPath.row].type
         cell.amountLabel.text = String(details.detailArray[indexPath.row].amount)
         cell.dateLabel.text = details.detailArray[indexPath.row].date
         return cell

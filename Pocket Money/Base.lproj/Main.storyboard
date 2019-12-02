@@ -28,7 +28,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kA-3I-Rf9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kA-3I-Rf9">
                                 <rect key="frame" x="10" y="160" width="394" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="4xf-pa-poJ"/>
@@ -37,7 +37,7 @@
                                 <color key="textColor" red="0.86659532790000005" green="0.87077575920000005" blue="0.85490757230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hId-rw-7RW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hId-rw-7RW">
                                 <rect key="frame" x="10" y="268" width="394" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="ONm-eU-Ju4"/>
@@ -175,6 +175,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="TableView" destination="pcF-ym-rfJ" id="IDC-XO-6Fb"/>
+                        <outlet property="incomeLabel" destination="2kA-3I-Rf9" id="3PR-73-fy3"/>
+                        <outlet property="spendingLabel" destination="hId-rw-7RW" id="XLN-Dh-JKH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -199,6 +201,9 @@
                                     <segment title="SPENDING"/>
                                 </segments>
                                 <color key="tintColor" red="0.33308446407318115" green="0.66580659151077271" blue="0.72158569097518921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="sortSegmentPressed:" destination="zQE-CW-CjP" eventType="valueChanged" id="NnK-l0-47t"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMOUNT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc0-VR-S31">
                                 <rect key="frame" x="20" y="153" width="374" height="40"/>
@@ -387,9 +392,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="amountField" destination="YvI-2e-5qw" id="aOS-fX-jQB"/>
+                        <outlet property="cancelBarButton" destination="7Xp-Ob-gQM" id="3C8-N6-koV"/>
                         <outlet property="collectionView" destination="d26-Bt-9wR" id="Bfb-dL-U5r"/>
                         <outlet property="dateField" destination="4iu-FN-wtl" id="rTF-YQ-jhQ"/>
                         <outlet property="detailField" destination="4zu-jB-i8G" id="6It-4W-bla"/>
+                        <outlet property="saveBarButton" destination="heP-qO-Czn" id="qgQ-vA-BO0"/>
+                        <outlet property="sortSegmentControl" destination="nFa-vE-hDv" id="Jwg-oB-oog"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqV-MN-iqo" userLabel="First Responder" sceneMemberID="firstResponder"/>

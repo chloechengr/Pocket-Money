@@ -14,6 +14,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var detailField: UITextView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
+    @IBOutlet weak var cancelBarButton: UIBarButtonItem!
+    @IBOutlet weak var sortSegmentControl: UISegmentedControl!
     
     var detail: Detail!
     
@@ -35,6 +38,21 @@ class DetailViewController: UIViewController {
         } else {
             navigationController?.popViewController(animated: true)
         }
+    }
+    
+    func sortBasedOnSegmentPressed() {
+        switch sortSegmentControl.selectedSegmentIndex {
+        case 0: //Income
+            detail.type = "Income"
+        case 1: //Spending
+            detail.type = "Spending"
+        default:
+            print("Hey, you should not have gotten here, our segmented conrtol should just have 2 segments")
+        }
+    }
+    
+    @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
+        sortBasedOnSegmentPressed()
     }
     
     @IBAction func photoButtonPressed(_ sender: UIButton) {
