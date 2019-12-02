@@ -43,6 +43,12 @@ class DetailViewController: UIViewController {
         photos = Photos()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        photos.loadData(detail: detail) {
+            self.collectionView.reloadData()
+        }
+    }
+    
     func leaveViewController() {
         let isPresentingInAddMode = presentingViewController is UINavigationController
         if isPresentingInAddMode {
@@ -92,11 +98,7 @@ class DetailViewController: UIViewController {
                 self.saveBarButton.title = "Done"
                 self.cancelBarButton.title = ""
                 self.navigationController?.setToolbarHidden(true, animated: true)
-                if segueIdentifier == "AddReview" {
-                    self.performSegue(withIdentifier: segueIdentifier, sender: nil)
-                } else {
-                    self.cameraOrLibraryAlert()
-                }
+                self.cameraOrLibraryAlert()
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -164,7 +166,6 @@ extension DetailViewController: UINavigationControllerDelegate, UIImagePickerCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let photo = Photo()
         photo.image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        
         dismiss(animated: true) {
             photo.saveData(detail: self.detail) { (success) in
             }

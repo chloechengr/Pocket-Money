@@ -52,5 +52,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Pocket Money will need access to your camera in order to post photos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Pocket Money will need acess to your photo library in order to post library images.</string>
 </dict>
 </plist>

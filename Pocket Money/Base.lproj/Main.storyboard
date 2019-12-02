@@ -262,7 +262,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1,000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YvI-2e-5qw">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YvI-2e-5qw">
                                 <rect key="frame" x="20" y="199" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.18476797582425974" green="0.30962592840149261" blue="0.40882924758843364" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.3342401042" green="0.66503776240000001" blue="0.71908968780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -273,7 +273,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2019-12-31" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4iu-FN-wtl">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4iu-FN-wtl">
                                 <rect key="frame" x="20" y="307" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.18476797580000001" green="0.30962592839999997" blue="0.4088292476" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.3342401042" green="0.66503776240000001" blue="0.71908968780000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -284,7 +284,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Grocery shopping" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4zu-jB-i8G">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4zu-jB-i8G">
                                 <rect key="frame" x="20" y="413" width="374" height="150"/>
                                 <color key="backgroundColor" red="0.186370849609375" green="0.30820050835609436" blue="0.4117814302444458" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -295,10 +295,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qj-OF-fPS">
-                                <rect key="frame" x="20" y="787" width="374" height="40"/>
+                                <rect key="frame" x="20" y="787" width="374" height="45"/>
                                 <color key="backgroundColor" red="0.8727262616" green="0.35365355009999999" blue="0.34116005900000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="AOt-Bf-seN"/>
+                                    <constraint firstAttribute="height" constant="45" id="YIh-eR-bpZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="DELETE"/>
@@ -313,7 +313,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="eOL-Ob-XZE"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n80-5T-WGo">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n80-5T-WGo">
                                     <size key="itemSize" width="135" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -327,7 +327,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="135" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jp7-9j-dUz">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jp7-9j-dUz">
                                                     <rect key="frame" x="0.0" y="0.0" width="135" height="150"/>
                                                 </imageView>
                                             </subviews>
@@ -371,9 +371,7 @@
                         <color key="backgroundColor" red="0.12280047684907913" green="0.20295420289039612" blue="0.26667743921279907" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7Qj-OF-fPS" firstAttribute="leading" secondItem="ThX-pc-AO5" secondAttribute="leading" constant="20" id="09a-j4-abE"/>
                             <constraint firstItem="nbV-K5-DHc" firstAttribute="top" secondItem="4iu-FN-wtl" secondAttribute="bottom" constant="10" id="0Ht-8j-zex"/>
-                            <constraint firstItem="ThX-pc-AO5" firstAttribute="trailing" secondItem="7Qj-OF-fPS" secondAttribute="trailing" constant="20" id="1db-1H-9xM"/>
                             <constraint firstItem="vSU-4m-G4j" firstAttribute="top" secondItem="4zu-jB-i8G" secondAttribute="bottom" constant="10" id="1md-Ol-ttU"/>
                             <constraint firstItem="acf-yw-Tr8" firstAttribute="top" secondItem="4zu-jB-i8G" secondAttribute="bottom" constant="10" id="280-hY-CcV"/>
                             <constraint firstItem="4zu-jB-i8G" firstAttribute="leading" secondItem="ThX-pc-AO5" secondAttribute="leading" constant="20" id="3Cw-yY-Flo"/>
@@ -391,7 +389,7 @@
                             <constraint firstItem="ThX-pc-AO5" firstAttribute="trailing" secondItem="Ea9-iz-BPp" secondAttribute="trailing" constant="20" id="UmO-ug-U4m"/>
                             <constraint firstItem="YvI-2e-5qw" firstAttribute="leading" secondItem="ThX-pc-AO5" secondAttribute="leading" constant="20" id="Xq7-K2-8ME"/>
                             <constraint firstItem="4iu-FN-wtl" firstAttribute="leading" secondItem="ThX-pc-AO5" secondAttribute="leading" constant="20" id="a9I-yQ-He8"/>
-                            <constraint firstItem="7Qj-OF-fPS" firstAttribute="top" secondItem="d26-Bt-9wR" secondAttribute="bottom" constant="18" id="b9S-tm-Deg"/>
+                            <constraint firstItem="7Qj-OF-fPS" firstAttribute="top" secondItem="d26-Bt-9wR" secondAttribute="bottom" constant="18" id="alS-va-Iuw"/>
                             <constraint firstItem="YvI-2e-5qw" firstAttribute="top" secondItem="Vc0-VR-S31" secondAttribute="bottom" constant="6" id="eor-ou-EtT"/>
                             <constraint firstItem="ThX-pc-AO5" firstAttribute="trailing" secondItem="4iu-FN-wtl" secondAttribute="trailing" constant="20" id="g5t-q8-zG2"/>
                             <constraint firstItem="d26-Bt-9wR" firstAttribute="leading" secondItem="ThX-pc-AO5" secondAttribute="leading" constant="20" id="gjl-Tr-lgX"/>
@@ -400,16 +398,18 @@
                             <constraint firstItem="ThX-pc-AO5" firstAttribute="trailing" secondItem="vSU-4m-G4j" secondAttribute="trailing" constant="20" id="nBF-Le-cJO"/>
                             <constraint firstItem="Ea9-iz-BPp" firstAttribute="leading" secondItem="nbV-K5-DHc" secondAttribute="leading" id="o8a-hC-JJW"/>
                             <constraint firstItem="Ea9-iz-BPp" firstAttribute="leading" secondItem="ThX-pc-AO5" secondAttribute="leading" constant="20" id="qO9-z7-6wo"/>
+                            <constraint firstItem="7Qj-OF-fPS" firstAttribute="leading" secondItem="ThX-pc-AO5" secondAttribute="leading" constant="20" id="sLr-lE-9af"/>
                             <constraint firstItem="nFa-vE-hDv" firstAttribute="top" secondItem="ThX-pc-AO5" secondAttribute="top" constant="20" id="soh-Wb-GeJ"/>
                             <constraint firstItem="Ea9-iz-BPp" firstAttribute="leading" secondItem="4zu-jB-i8G" secondAttribute="leading" id="tb1-EI-ndZ"/>
                             <constraint firstItem="ThX-pc-AO5" firstAttribute="trailing" secondItem="nFa-vE-hDv" secondAttribute="trailing" constant="10" id="wYX-LZ-Mfx"/>
                             <constraint firstItem="ThX-pc-AO5" firstAttribute="trailing" secondItem="4zu-jB-i8G" secondAttribute="trailing" constant="20" id="y5C-FG-O9C"/>
+                            <constraint firstItem="ThX-pc-AO5" firstAttribute="trailing" secondItem="7Qj-OF-fPS" secondAttribute="trailing" constant="20" id="y7b-sR-QfG"/>
                             <constraint firstItem="ThX-pc-AO5" firstAttribute="trailing" secondItem="nbV-K5-DHc" secondAttribute="trailing" constant="20" id="yZ8-fi-ocz"/>
                             <constraint firstItem="ThX-pc-AO5" firstAttribute="trailing" secondItem="Vc0-VR-S31" secondAttribute="trailing" constant="20" id="yh6-U9-acT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ThX-pc-AO5"/>
                     </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="YdL-Iz-BZs">
+                    <navigationItem key="navigationItem" id="YdL-Iz-BZs">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="7Xp-Ob-gQM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
