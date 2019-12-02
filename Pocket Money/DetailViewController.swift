@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DetailViewController.swift
 //  Pocket Money
 //
 //  Created by Chloe Cheng on 12/1/19.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
-
+    
 
 }
-

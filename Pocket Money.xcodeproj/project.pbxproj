@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4DA677FCD0D865B6622E10 /* Pods_Pocket_Money.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5691DC7AB57E663B82D412C /* Pods_Pocket_Money.framework */; };
+		A124ED522394B16600BEF501 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = A124ED512394B16600BEF501 /* Details.swift */; };
+		A13CEBCE2394B01800055B03 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CEBCD2394B01700055B03 /* Detail.swift */; };
+		A17018082394B2720013B84F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17018072394B2720013B84F /* DetailViewController.swift */; };
 		A1794E85239467F50054DA3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1794E84239467F50054DA3C /* AppDelegate.swift */; };
 		A1794E87239467F50054DA3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1794E86239467F50054DA3C /* ViewController.swift */; };
 		A1794E8A239467F50054DA3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1794E88239467F50054DA3C /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1583EBCFB9CC62B2AACE59AA /* Pods-Pocket Money.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Money.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Money/Pods-Pocket Money.debug.xcconfig"; sourceTree = "<group>"; };
+		A124ED512394B16600BEF501 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		A13CEBCD2394B01700055B03 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		A17018072394B2720013B84F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A1794E81239467F50054DA3C /* Pocket Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1794E84239467F50054DA3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1794E86239467F50054DA3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,8 @@
 		A1794E8B239467F70054DA3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1794E8E239467F70054DA3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1794E90239467F70054DA3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB3B301B4C6938FEEC294D82 /* Pods-Pocket Money.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Money.release.xcconfig"; path = "Target Support Files/Pods-Pocket Money/Pods-Pocket Money.release.xcconfig"; sourceTree = "<group>"; };
+		F5691DC7AB57E663B82D412C /* Pods_Pocket_Money.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Money.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4DA677FCD0D865B6622E10 /* Pods_Pocket_Money.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				A1794E83239467F50054DA3C /* Pocket Money */,
 				A1794E82239467F50054DA3C /* Products */,
+				CB715631989E6357AF8BE8E0 /* Pods */,
+				F97F3AF5940CBBD8D934A84E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +68,33 @@
 			isa = PBXGroup;
 			children = (
 				A1794E84239467F50054DA3C /* AppDelegate.swift */,
+				A124ED512394B16600BEF501 /* Details.swift */,
+				A13CEBCD2394B01700055B03 /* Detail.swift */,
 				A1794E86239467F50054DA3C /* ViewController.swift */,
+				A17018072394B2720013B84F /* DetailViewController.swift */,
 				A1794E88239467F50054DA3C /* Main.storyboard */,
 				A1794E8B239467F70054DA3C /* Assets.xcassets */,
 				A1794E8D239467F70054DA3C /* LaunchScreen.storyboard */,
 				A1794E90239467F70054DA3C /* Info.plist */,
 			);
 			path = "Pocket Money";
+			sourceTree = "<group>";
+		};
+		CB715631989E6357AF8BE8E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1583EBCFB9CC62B2AACE59AA /* Pods-Pocket Money.debug.xcconfig */,
+				EB3B301B4C6938FEEC294D82 /* Pods-Pocket Money.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F97F3AF5940CBBD8D934A84E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5691DC7AB57E663B82D412C /* Pods_Pocket_Money.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1794E93239467F70054DA3C /* Build configuration list for PBXNativeTarget "Pocket Money" */;
 			buildPhases = (
+				8D216E174E7C3ED125BA1573 /* [CP] Check Pods Manifest.lock */,
 				A1794E7D239467F50054DA3C /* Sources */,
 				A1794E7E239467F50054DA3C /* Frameworks */,
 				A1794E7F239467F50054DA3C /* Resources */,
+				5C20DEDDA94768D2E07CA47E /* [CP] Embed Pods Frameworks */,
+				E2FE94BC1B2FF3D41EFC2C41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +166,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C20DEDDA94768D2E07CA47E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Money/Pods-Pocket Money-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Money/Pods-Pocket Money-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pocket Money/Pods-Pocket Money-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D216E174E7C3ED125BA1573 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pocket Money-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2FE94BC1B2FF3D41EFC2C41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Money/Pods-Pocket Money-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Money/Pods-Pocket Money-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pocket Money/Pods-Pocket Money-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A1794E7D239467F50054DA3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +232,9 @@
 			files = (
 				A1794E87239467F50054DA3C /* ViewController.swift in Sources */,
 				A1794E85239467F50054DA3C /* AppDelegate.swift in Sources */,
+				A17018082394B2720013B84F /* DetailViewController.swift in Sources */,
+				A124ED522394B16600BEF501 /* Details.swift in Sources */,
+				A13CEBCE2394B01800055B03 /* Detail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +378,7 @@
 		};
 		A1794E94239467F70054DA3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1583EBCFB9CC62B2AACE59AA /* Pods-Pocket Money.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +397,7 @@
 		};
 		A1794E95239467F70054DA3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3B301B4C6938FEEC294D82 /* Pods-Pocket Money.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
