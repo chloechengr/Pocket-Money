@@ -30,9 +30,6 @@ class ViewController: UIViewController {
         TableView.isHidden = true
         
         details = Details()
-        details.detailArray.append(Detail(amount: 100, date: "2019-12-31", detail: "Grocery Shopping", postingUserID: "", documentID: ""))
-        details.detailArray.append(Detail(amount: 200, date: "2019-12-31", detail: "Christmas Gift", postingUserID: "", documentID: ""))
-        details.detailArray.append(Detail(amount: 300, date: "2019-12-31", detail: "Salary", postingUserID: "", documentID: ""))
     }
     
     func signIn() {
@@ -45,6 +42,13 @@ class ViewController: UIViewController {
             present(authUI.authViewController(), animated: true, completion: nil)
         } else {
             TableView.isHidden = false
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setToolbarHidden(false, animated: false)
+        details.loadData {
+            self.TableView.reloadData()
         }
     }
     
