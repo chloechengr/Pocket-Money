@@ -9,5 +9,5 @@
 import Foundation
 
 class Details {
-    var detailArray = [Detail]
+    var detailArray = [Detail]()
 }

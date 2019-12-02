@@ -16,6 +16,7 @@
 		A1794E8A239467F50054DA3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1794E88239467F50054DA3C /* Main.storyboard */; };
 		A1794E8C239467F70054DA3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1794E8B239467F70054DA3C /* Assets.xcassets */; };
 		A1794E8F239467F70054DA3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1794E8D239467F70054DA3C /* LaunchScreen.storyboard */; };
+		A1F8E7E52394B85500225A3B /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8E7E42394B85500225A3B /* DetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A1794E8B239467F70054DA3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1794E8E239467F70054DA3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1794E90239467F70054DA3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1F8E7E42394B85500225A3B /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		EB3B301B4C6938FEEC294D82 /* Pods-Pocket Money.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Money.release.xcconfig"; path = "Target Support Files/Pods-Pocket Money/Pods-Pocket Money.release.xcconfig"; sourceTree = "<group>"; };
 		F5691DC7AB57E663B82D412C /* Pods_Pocket_Money.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Money.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 				A124ED512394B16600BEF501 /* Details.swift */,
 				A13CEBCD2394B01700055B03 /* Detail.swift */,
 				A1794E86239467F50054DA3C /* ViewController.swift */,
+				A1F8E7E42394B85500225A3B /* DetailTableViewCell.swift */,
 				A17018072394B2720013B84F /* DetailViewController.swift */,
 				A1794E88239467F50054DA3C /* Main.storyboard */,
 				A1794E8B239467F70054DA3C /* Assets.xcassets */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F8E7E52394B85500225A3B /* DetailTableViewCell.swift in Sources */,
 				A1794E87239467F50054DA3C /* ViewController.swift in Sources */,
 				A1794E85239467F50054DA3C /* AppDelegate.swift in Sources */,
 				A17018082394B2720013B84F /* DetailViewController.swift in Sources */,

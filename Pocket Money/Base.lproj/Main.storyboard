@@ -78,7 +78,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.18859749369078996" green="0.28650265604009439" blue="0.36429118989082765" alpha="0.85110766267123283" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.17873232662730595" green="0.27151626088363823" blue="0.34523582824365484" alpha="0.85220462328767121" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="65" id="moM-2P-IhI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="65" id="moM-2P-IhI" customClass="DetailTableViewCell" customModule="Pocket_Money" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="394" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="moM-2P-IhI" id="bdb-Vh-qiw">
@@ -126,6 +126,9 @@
                                         <color key="backgroundColor" red="0.18112534594255938" green="0.27389176115982583" blue="0.35290066723896163" alpha="0.84532855308219179" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" red="0.16252175642391897" green="0.24576002801867394" blue="0.31665383982779416" alpha="0.84532855308219179" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="amountLabel" destination="BLH-jS-GKy" id="p7u-ex-7ve"/>
+                                            <outlet property="dateLabel" destination="F3Q-h4-8Dh" id="NvN-hX-28K"/>
+                                            <outlet property="typeLabel" destination="ZbF-Vw-oJ2" id="6SB-sd-8ZP"/>
                                             <segue destination="zQE-CW-CjP" kind="show" identifier="ShowDetail" id="WWW-Zn-al7"/>
                                         </connections>
                                     </tableViewCell>
@@ -167,6 +170,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="TableView" destination="pcF-ym-rfJ" id="IDC-XO-6Fb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,6 +264,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="DELETE"/>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="zQE-CW-CjP" eventType="touchUpInside" id="mUv-bQ-Iwj"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d26-Bt-9wR">
                                 <rect key="frame" x="20" y="619" width="374" height="150"/>
@@ -303,6 +312,9 @@
                                 <state key="normal" title="UPLOAD PIC">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="photoButtonPressed:" destination="zQE-CW-CjP" eventType="touchUpInside" id="NnH-sr-YQl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PICTURE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acf-yw-Tr8">
                                 <rect key="frame" x="20" y="573" width="102" height="40"/>
@@ -358,11 +370,23 @@
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="YdL-Iz-BZs">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="7Xp-Ob-gQM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="zQE-CW-CjP" id="Yiq-sR-dTj"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="heP-qO-Czn">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="zQE-CW-CjP" id="v3s-QQ-o6I"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="amountField" destination="YvI-2e-5qw" id="aOS-fX-jQB"/>
+                        <outlet property="collectionView" destination="d26-Bt-9wR" id="Bfb-dL-U5r"/>
+                        <outlet property="dateField" destination="4iu-FN-wtl" id="rTF-YQ-jhQ"/>
+                        <outlet property="detailField" destination="4zu-jB-i8G" id="6It-4W-bla"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqV-MN-iqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
