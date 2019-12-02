@@ -253,7 +253,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea9-iz-BPp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE (YYYY-MM-DD)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea9-iz-BPp">
                                 <rect key="frame" x="20" y="261" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="J9O-2b-MJ1"/>
@@ -320,7 +320,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Sak-cw-PDm">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="Sak-cw-PDm" customClass="PhotosCollectionViewCell" customModule="Pocket_Money" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -338,6 +338,9 @@
                                             <constraint firstItem="jp7-9j-dUz" firstAttribute="top" secondItem="Sak-cw-PDm" secondAttribute="top" id="fXR-Xa-N4O"/>
                                             <constraint firstAttribute="bottom" secondItem="jp7-9j-dUz" secondAttribute="bottom" id="xv8-y9-KF2"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="jp7-9j-dUz" id="bfM-pg-lMY"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

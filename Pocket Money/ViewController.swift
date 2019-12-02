@@ -48,6 +48,10 @@ class ViewController: UIViewController {
         }
     }
     
+    func updateUserInterface() {
+        details.detailArray.sort(by: {$0.date < $1.date})
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         details.loadData {
             self.TableView.reloadData()
@@ -64,6 +68,7 @@ class ViewController: UIViewController {
                 self.incomeLabel.text = String(totalIncome)
                 self.spendingLabel.text = String(totalSpending)
                 self.balanceLabel.text = String(totalIncome - totalSpending)
+                self.updateUserInterface()
             } else {
                 self.incomeLabel.text = "0.0"
                 self.spendingLabel.text = "0.0"

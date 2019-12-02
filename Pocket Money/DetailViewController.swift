@@ -19,9 +19,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var sortSegmentControl: UISegmentedControl!
     
     var detail: Detail!
+    var photos: Photos!
+    var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // hide keyboard if we tap outside of a field
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        imagePicker.delegate = self
         
         if detail == nil {
             detail = Detail()
@@ -29,6 +39,8 @@ class DetailViewController: UIViewController {
         amountField.text = String(detail.amount)
         dateField.text = detail.date
         detailField.text = detail.detail
+        
+        photos = Photos()
     }
     
     func leaveViewController() {
@@ -51,12 +63,58 @@ class DetailViewController: UIViewController {
         }
     }
     
+    func cameraOrLibraryAlert() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+            self.accessCamera()
+        }
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { _ in
+            self.accessLibrary()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cameraAction)
+        alertController.addAction(photoLibraryAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func saveCancelAlert(title: String, message: String, segueIdentifier: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
+            self.detail.saveData { success in
+                self.saveBarButton.title = "Done"
+                self.cancelBarButton.title = ""
+                self.navigationController?.setToolbarHidden(true, animated: true)
+                if segueIdentifier == "AddReview" {
+                    self.performSegue(withIdentifier: segueIdentifier, sender: nil)
+                } else {
+                    self.cameraOrLibraryAlert()
+                }
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
     
     @IBAction func sortSegmentControl(_ sender: UISegmentedControl) {
         sortBasedOnSegmentPressed()
     }
     
     @IBAction func photoButtonPressed(_ sender: UIButton) {
+        if detail.documentID == "" {
+            saveCancelAlert(title: "This Transaction Has Not Been Saved", message: "You must save this transaction before you can add a photo.", segueIdentifier: "AddPhoto")
+        } else {
+            cameraOrLibraryAlert()
+        }
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -88,5 +146,46 @@ class DetailViewController: UIViewController {
             }
         }
     }
+}
+
+extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.photoArray.count
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotosCollectionViewCell
+        cell.photo = photos.photoArray[indexPath.row]
+        return cell
+    }
+}
+
+extension DetailViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let photo = Photo()
+        photo.image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        dismiss(animated: true) {
+            photo.saveData(detail: self.detail) { (success) in
+            }
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func accessLibrary() {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func accessCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+            present(imagePicker, animated: true, completion: nil)
+        } else {
+            showAlert(title: "Camera Not Available", message: "There is no camera available on this device.")
+        }
+    }
 }
