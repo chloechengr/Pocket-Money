@@ -148,6 +148,9 @@ class DetailViewController: UIViewController {
             }
         }
     }
+    
+    
+    
 }
 
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {

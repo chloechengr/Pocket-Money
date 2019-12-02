@@ -65,9 +65,9 @@ class ViewController: UIViewController {
                         totalSpending = totalSpending + self.details.detailArray[number].amount
                     }
                 }
-                self.incomeLabel.text = String(totalIncome)
-                self.spendingLabel.text = String(totalSpending)
-                self.balanceLabel.text = String(totalIncome - totalSpending)
+                self.incomeLabel.text = String(totalIncome.roundTo(places: 2))
+                self.spendingLabel.text = String(totalSpending.roundTo(places: 2))
+                self.balanceLabel.text = String((totalIncome - totalSpending).roundTo(places: 2))
                 self.updateUserInterface()
             } else {
                 self.incomeLabel.text = "0.0"
@@ -105,7 +105,6 @@ class ViewController: UIViewController {
             print("*** ERROR: Couldn't sign out")
         }
     }
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
