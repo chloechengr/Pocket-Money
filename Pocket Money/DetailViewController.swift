@@ -51,7 +51,8 @@ class DetailViewController: UIViewController {
         }
     }
     
-    @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
+    
+    @IBAction func sortSegmentControl(_ sender: UISegmentedControl) {
         sortBasedOnSegmentPressed()
     }
     
@@ -63,6 +64,9 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
+        if detail.type == "" {
+            detail.type = "Income"
+        }
         detail.amount = Double(amountField.text!) as! Double
         detail.date = dateField.text!
         detail.detail = detailField.text!
@@ -76,6 +80,13 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
+        detail.deleteData(detail: detail) { (success) in
+            if success {
+                self.leaveViewController()
+            } else {
+                print("😡 ERROR: Delete unsuccessful")
+            }
+        }
     }
     
 }

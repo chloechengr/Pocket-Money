@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var incomeLabel: UILabel!
     @IBOutlet weak var spendingLabel: UILabel!
+    @IBOutlet weak var balanceLabel: UILabel!
     
     var details: Details!
     var authUI: FUIAuth!
@@ -48,7 +49,6 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setToolbarHidden(false, animated: false)
         details.loadData {
             self.TableView.reloadData()
             if self.details.detailArray.count > 0 {
@@ -63,9 +63,11 @@ class ViewController: UIViewController {
                 }
                 self.incomeLabel.text = String(totalIncome)
                 self.spendingLabel.text = String(totalSpending)
+                self.balanceLabel.text = String(totalIncome - totalSpending)
             } else {
                 self.incomeLabel.text = "0.0"
                 self.spendingLabel.text = "0.0"
+                self.balanceLabel.text = "0.0"
             }
         }
     }
